@@ -1,0 +1,55 @@
+#include <iostream>
+
+int main() {
+  
+  double earth_weight;
+  int planet;
+  double new_weight;
+  
+  std::cout << "Enter your Earth weight ";
+  std::cin >> earth_weight;
+
+  std::cout << "Enter the number correlating to the planet you wish to fight on ";
+  std::cin >> planet;
+  
+  if (planet == 1) {
+new_weight = earth_weight * 0.38;
+std::cout << "Your weight on Mercury is " << new_weight << ". Enjoy the fight!\n";
+  }
+  
+  else if (planet == 2) {
+new_weight = earth_weight * 0.91;
+std::cout << "Your weight on Venus is " << new_weight << ". Enjoy the fight!\n";
+  }
+  
+  else if (planet == 3) {
+new_weight = earth_weight * 0.38;
+std::cout << "Your weight on Mars is " << new_weight << ". Enjoy the fight!\n"; 
+  }
+
+  else if (planet == 4) {
+new_weight = earth_weight * 2.34;
+std::cout << "Your weight on Jupiter is " << new_weight << ". Enjoy the fight!\n";    
+  }
+
+  else if (planet == 5) {
+new_weight = earth_weight * 1.06;
+std::cout << "Your weight on Saturn is " << new_weight << ". Enjoy the fight!\n";   
+  }
+
+  else if (planet == 6) {
+new_weight = earth_weight * 0.92;
+std::cout << "Your weight on Uranus is " << new_weight << ". Enjoy the fight!\n";    
+  }
+
+  else if (planet == 7) {
+new_weight = earth_weight * 1.19;
+std::cout << "Your weight on Neptune is " << new_weight << ". Enjoy the fight!\n";    
+  }
+
+  else {
+std::cout << "Invalid planet selection. Try again.\n";
+  }
+  
+  
+}
