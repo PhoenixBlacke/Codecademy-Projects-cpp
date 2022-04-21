@@ -1,0 +1,27 @@
+#include <iostream>
+/* The first year of a dog's life = 15 human years. The second year of a dog's life = 9 human years. The remaining years of a dog's life = 4 human years. */
+int main() {
+
+  std::string dog_name;
+  int dog_age;
+
+  std::cout << "Enter your dog's name:";
+  std::cin >> dog_name;
+
+  std::cout << "Next, enter your dog's age:";
+  std::cin >> dog_age;
+
+  int first_year, second_year, later_years, human_years;
+
+  first_year = 15;
+  second_year = 9;
+  later_years = (dog_age - 2) * 4;
+if ( dog_age < 2) {
+std::cout << "My name is " << dog_name << " and I am " << first_year << " human years old!\n";
+}
+else if (dog_age >= 2) {  
+  human_years = first_year + second_year + later_years;
+
+  std::cout << "My name is " << dog_name << " and I am " << human_years << " human years old!\n";
+}
+}
