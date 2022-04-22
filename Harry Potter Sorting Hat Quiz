@@ -1,0 +1,173 @@
+#include <iostream>
+
+int main() {
+  
+int g = 0;
+int s = 0;
+int h = 0;
+int r = 0;
+int answer0, answer1, answer2, answer3, answer4, answer5, answer6;
+
+std::cout << "Welcome to Hogwarts. Please take a seat and let the sorting hat determine your house...\n";
+std::cout << "Please press 1 to continue\n";
+std::cin >> answer0;
+
+std::cout << "Dawn or Dusk?\n";
+std::cout << "  1) Dawn\n";
+std::cout << "  2) Dusk\n";
+std::cin >> answer1;
+
+  if (answer1 == 1) {
+    g++;
+    h++;
+  }
+  else if (answer1 == 2) {
+    s++;
+    r++;
+  } 
+  else {
+    std::cout << "Invalid response. I can't get a clear picture of your house.\n";
+  }
+
+std::cout << "What is your favorite place on Hogwarts grounds?\n";
+std::cout << "  1) Dungeons\n";
+std::cout << "  2) Library\n";
+std::cout << "  3) Quidditch field\n";
+std::cout << "  4) Great Hall\n";
+std::cin >> answer2;
+
+  if (answer2 == 1) {
+    s++;
+  }
+  else if (answer2 == 2) {
+    r++;
+  } 
+  else if (answer2 == 3) {
+    g++;
+  } 
+  else if (answer2 == 4) {
+    h++;
+  } 
+  else {
+    std::cout << "Invalid response. I can't get a clear picture of your house.\n";
+  }
+
+std::cout << "Which character do you most relate to?\n";
+std::cout << "  1) Cho\n";
+std::cout << "  2) Luna\n";
+std::cout << "  3) Harry\n";
+std::cout << "  4) Draco\n";
+std::cin >> answer3;
+
+  if (answer3 == 1) {
+    h++;
+  }
+  else if (answer3 == 2) {
+    r++;
+  } 
+  else if (answer3 == 3) {
+    g++;
+  } 
+  else if (answer3 == 4) {
+    s++;
+  } 
+  else {
+    std::cout << "Invalid response. I can't get a clear picture of your house.\n";
+  }
+
+std::cout << "Yes...I am starting to see your house now. Please press 1 to continue\n";
+std::cin >> answer0;
+
+std::cout << "You are attacked by another wizard, which spell do you use to retaliate?\n";
+std::cout << "  1) Expelliarmus\n";
+std::cout << "  2) Avada Kedavra\n";
+std::cout << "  3) Stupify\n";
+std::cout << "  4) Obliviate\n";
+std::cin >> answer4;
+
+  if (answer4 == 1) {
+    g++;
+  }
+  else if (answer4 == 2) {
+    s++;
+  } 
+  else if (answer4 == 3) {
+    h++;
+  } 
+  else if (answer4 == 4) {
+    r++;
+  } 
+  else {
+    std::cout << "Invalid response. I can't get a clear picture of your house.\n";
+  }
+
+std::cout << "What is your favorite of the three Deathly Hollows?\n";
+std::cout << "  1) Cloak of Invisibility\n";
+std::cout << "  2) Resurrection stone\n";
+std::cout << "  3) Elder Wand\n";
+std::cin >> answer5;
+
+  if (answer5 == 1) {
+    r++;
+    g++;
+    s++;
+  }
+  else if (answer5 == 2) {
+    s++;
+    g++;
+    h++;
+  } 
+  else if (answer5 == 3) {
+    g++;
+    h++;
+    r++;
+  } 
+  else {
+    std::cout << "Invalid response. I can't get a clear picture of your house.\n";
+  }
+
+std::cout << "Lastly, what house would you prefer?\n";
+std::cout << "  1) Hufflepuff\n";
+std::cout << "  2) Ravenclaw\n";
+std::cout << "  3) Slytherin\n";
+std::cout << "  4) Gryffindor\n";
+std::cin >> answer6;
+
+  if (answer6 == 1) {
+    h++;
+  }
+  else if (answer6 == 2) {
+    r++;
+  } 
+  else if (answer6 == 3) {
+    s++;
+  } 
+  else if (answer6 == 4) {
+    g++;
+  } 
+  else {
+    std::cout << "Invalid response. I can't get a clear picture of your house.\n";
+  }
+
+std::string house;
+int max = 0;
+if (g > max) {
+  max = g;
+  house = "Gryffindor";
+}
+if (s > max) {
+  max = s;
+  house = "Slytherin";
+}
+if (r > max) {
+  max = r;
+  house = "Ravenclaw";
+}
+if (h > max) {
+  max = h;
+  house = "Hufflepuff";
+}
+
+std::cout << "I can see it now! You are being sorted into " << house << "! 10 points to " << house << "!\n";
+
+}
