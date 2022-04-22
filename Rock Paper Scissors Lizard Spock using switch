@@ -1,0 +1,154 @@
+#include <iostream>
+#include <cstdlib>
+int main() {
+srand (time(NULL));
+int computer = std::rand () % 5 + 1;
+int user = 0;
+
+
+std::cout << "Welcome to Rock Paper Scissors Lizard Spock!\n";
+
+std::cout << "1) Rock\n";
+std::cout << "2) Paper\n";
+std::cout << "3) Scissors\n";
+std::cout << "4) Lizard\n";
+std::cout << "5) Spock\n";
+
+int rock = 1;
+int paper = 2;
+int scissors = 3;
+int lizard = 4;
+int spock = 5;
+
+std::cout << "Shoot!!!\n";
+std::cin >> user;
+
+/* 
+  rock > scissors
+  scissors > paper
+  paper > rock
+  lizard > spock
+  spock > scissors
+  scissors > lizard
+  lizard > paper
+  paper > spock
+  spock > rock
+  rock > lizard
+  */
+
+switch (user) {
+  case 1: //User chooses rock
+    switch (computer) {
+      case 1:
+      std::cout << "Tie!\n";
+      break;
+      case 2:
+      std::cout << "You lose!\n";
+      break;
+      case 3:
+      std::cout << "You win!\n";
+      break;
+      case 4:
+      std::cout << "You win!\n";
+      break;
+      case 5:
+      std::cout << "You lose!\n";
+      break;
+      default:
+      std::cout << "Computer has made up new rules!\n";
+      break;
+    }
+    break;
+  case 2: //User chooses paper
+    switch (computer) {
+      case 1:
+      std::cout << "You win!\n";
+      break;
+      case 2:
+      std::cout << "Tie!\n";
+      break;
+      case 3:
+      std::cout << "You lose!\n";
+      break;
+      case 4:
+      std::cout << "You lose!\n";
+      break;
+      case 5:
+      std::cout << "You win!\n";
+      break;
+      default:
+      std::cout << "Computer has made up new rules!\n";
+      break;
+    }
+    break;
+  case 3: //User chooses scissors
+    switch (computer) {
+      case 1:
+      std::cout << "You lose!\n";
+      break;
+      case 2:
+      std::cout << "You win!\n";
+      break;
+      case 3:
+      std::cout << "Tie!\n";
+      break;
+      case 4:
+      std::cout << "You win!\n";
+      break;
+      case 5:
+      std::cout << "You lose!\n";
+      break;
+      default:
+      std::cout << "Computer has made up new rules!\n";
+      break;
+    }
+    break;
+  case 4: //User chooses lizard
+    switch (computer) {
+      case 1:
+      std::cout << "You lose!\n";
+      break;
+      case 2:
+      std::cout << "You win!\n";
+      break;
+      case 3:
+      std::cout << "You lose!\n";
+      break;
+      case 4:
+      std::cout << "Tie!\n";
+      break;
+      case 5:
+      std::cout << "You win!\n";
+      break;
+      default:
+      std::cout << "Computer has made up new rules!\n";
+      break;
+    }
+    break;
+  case 5: //User chooses spock
+    switch (computer) {
+      case 1:
+      std::cout << "You win!\n";
+      break;
+      case 2:
+      std::cout << "You lose!\n";
+      break;
+      case 3:
+      std::cout << "You win!\n";
+      break;
+      case 4:
+      std::cout << "You lose!\n";
+      break;
+      case 5:
+      std::cout << "Tie!\n";
+      break;
+      default:
+      std::cout << "Computer has made up new rules!\n";
+      break;
+    }
+    break;
+    default:
+    std::cout << "Invalid selection. Please try again.\n";
+    break;
+}
+}
